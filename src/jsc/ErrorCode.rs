@@ -703,9 +703,13 @@ impl ErrorCode {
     pub const TLS_ALPN_CALLBACK_INVALID_RESULT: ErrorCode = ErrorCode(322);
     /// `ERR_PROXY_TUNNEL` (instanceof Error)
     pub const PROXY_TUNNEL: ErrorCode = ErrorCode(323);
+    /// `ERR_INVALID_TYPESCRIPT_SYNTAX` (instanceof SyntaxError)
+    pub const INVALID_TYPESCRIPT_SYNTAX: ErrorCode = ErrorCode(324);
+    /// `ERR_UNSUPPORTED_TYPESCRIPT_SYNTAX` (instanceof SyntaxError)
+    pub const UNSUPPORTED_TYPESCRIPT_SYNTAX: ErrorCode = ErrorCode(325);
 
     /// == C++ `NODE_ERROR_COUNT`.
-    pub const COUNT: u16 = 324;
+    pub const COUNT: u16 = 326;
 }
 
 // ──────────────────────────────────────────────────────────────────────────
@@ -951,6 +955,9 @@ impl ErrorCode {
     pub const ERR_MYSQL_CONNECTION_CLOSED: ErrorCode = ErrorCode::MYSQL_CONNECTION_CLOSED;
     pub const ERR_MYSQL_CONNECTION_FAILED: ErrorCode = ErrorCode::MYSQL_CONNECTION_FAILED;
     pub const ERR_MYSQL_CONNECTION_REFUSED: ErrorCode = ErrorCode::MYSQL_CONNECTION_REFUSED;
+    pub const ERR_INVALID_TYPESCRIPT_SYNTAX: ErrorCode = ErrorCode::INVALID_TYPESCRIPT_SYNTAX;
+    pub const ERR_UNSUPPORTED_TYPESCRIPT_SYNTAX: ErrorCode =
+        ErrorCode::UNSUPPORTED_TYPESCRIPT_SYNTAX;
     pub const ERR_MYSQL_CONNECTION_TIMEOUT: ErrorCode = ErrorCode::MYSQL_CONNECTION_TIMEOUT;
     pub const ERR_MYSQL_IDLE_TIMEOUT: ErrorCode = ErrorCode::MYSQL_IDLE_TIMEOUT;
     pub const ERR_MYSQL_LIFETIME_TIMEOUT: ErrorCode = ErrorCode::MYSQL_LIFETIME_TIMEOUT;
@@ -1412,6 +1419,8 @@ static CODE_STR: [&str; ErrorCode::COUNT as usize] = [
     "ERR_HTTP2_GOAWAY_SESSION",
     "ERR_TLS_ALPN_CALLBACK_INVALID_RESULT",
     "ERR_PROXY_TUNNEL",
+    "ERR_INVALID_TYPESCRIPT_SYNTAX",
+    "ERR_UNSUPPORTED_TYPESCRIPT_SYNTAX",
 ];
 
 // ──────────────────────────────────────────────────────────────────────────

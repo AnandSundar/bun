@@ -335,5 +335,7 @@ const errors: ErrorCodeMapping = [
   ["ERR_HTTP2_GOAWAY_SESSION", Error],
   ["ERR_TLS_ALPN_CALLBACK_INVALID_RESULT", TypeError],
   ["ERR_PROXY_TUNNEL", Error],
+  ["ERR_INVALID_TYPESCRIPT_SYNTAX", SyntaxError],
+  ["ERR_UNSUPPORTED_TYPESCRIPT_SYNTAX", SyntaxError],
 ];
 export default errors;
