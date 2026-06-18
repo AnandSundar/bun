@@ -703,9 +703,11 @@ impl ErrorCode {
     pub const TLS_ALPN_CALLBACK_INVALID_RESULT: ErrorCode = ErrorCode(322);
     /// `ERR_PROXY_TUNNEL` (instanceof Error)
     pub const PROXY_TUNNEL: ErrorCode = ErrorCode(323);
+    /// `ERR_HTTP2_INVALID_CONNECTION_HEADERS` (instanceof TypeError)
+    pub const HTTP2_INVALID_CONNECTION_HEADERS: ErrorCode = ErrorCode(324);
 
     /// == C++ `NODE_ERROR_COUNT`.
-    pub const COUNT: u16 = 324;
+    pub const COUNT: u16 = 325;
 }
 
 // ──────────────────────────────────────────────────────────────────────────
@@ -1412,6 +1414,7 @@ static CODE_STR: [&str; ErrorCode::COUNT as usize] = [
     "ERR_HTTP2_GOAWAY_SESSION",
     "ERR_TLS_ALPN_CALLBACK_INVALID_RESULT",
     "ERR_PROXY_TUNNEL",
+    "ERR_HTTP2_INVALID_CONNECTION_HEADERS",
 ];
 
 // ──────────────────────────────────────────────────────────────────────────

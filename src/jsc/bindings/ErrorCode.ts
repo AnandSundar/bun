@@ -99,7 +99,6 @@ const errors: ErrorCodeMapping = [
   ["ERR_HTTP2_HEADERS_AFTER_RESPOND", Error],
   ["ERR_HTTP2_HEADERS_SENT", Error],
   ["ERR_HTTP2_INFO_STATUS_NOT_ALLOWED", RangeError],
-  ["ERR_HTTP2_INVALID_CONNECTION_HEADERS", TypeError],
   ["ERR_HTTP2_INVALID_HEADER_VALUE", TypeError],
   ["ERR_HTTP2_INVALID_INFO_STATUS", RangeError],
   ["ERR_HTTP2_INVALID_ORIGIN", TypeError],
@@ -336,5 +335,6 @@ const errors: ErrorCodeMapping = [
   ["ERR_HTTP2_GOAWAY_SESSION", Error],
   ["ERR_TLS_ALPN_CALLBACK_INVALID_RESULT", TypeError],
   ["ERR_PROXY_TUNNEL", Error],
+  ["ERR_HTTP2_INVALID_CONNECTION_HEADERS", TypeError],
 ];
 export default errors;
